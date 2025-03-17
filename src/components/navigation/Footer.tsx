@@ -20,7 +20,7 @@ export function Footer() {
               airwu.dev
             </Link>
             <p className="text-sm text-muted-foreground mt-2">
-              
+              checkout my old website at <a className="bg-gradient-to-r from-[#89b4fa] via-[#cba6f7] to-[#f5c2e7] bg-clip-text text-transparent" href="https://old1.airwu.dev">old1.airwu.dev</a>
             </p>
           </motion.div>
 
