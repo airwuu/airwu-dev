@@ -1,52 +1,53 @@
-"use client"
-import { useState, useEffect } from "react"
-import { motion } from "framer-motion"
-import { AnimatedHeading, AnimatedText } from "@/components/ui/animated-text"
-import { TiltCard } from "@/components/ui/tilt-card"
-import { Card, CardContent } from "@/components/ui/card"
+"use client";
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import { AnimatedHeading, AnimatedText } from "@/components/ui/animated-text";
+import { TiltCard } from "@/components/ui/tilt-card";
+import { Card, CardContent } from "@/components/ui/card";
 
-// Catppuccin Mocha colors for skill cards
 const skillColors = {
   frontend: {
-    bg: "#89b4fa", // blue
+    bg: "#89b4fa",
     textBg: "bg-[#89b4fa]/10",
     glareColor: "rgba(137, 180, 250, 0.8)",
   },
   backend: {
-    bg: "#a6e3a1", // green
+    bg: "#a6e3a1",
     textBg: "bg-[#a6e3a1]/10",
     glareColor: "rgba(166, 227, 161, 0.8)",
   },
   uiux: {
-    bg: "#f5c2e7", // pink
+    bg: "#f5c2e7",
     textBg: "bg-[#f5c2e7]/10",
     glareColor: "rgba(245, 194, 231, 0.8)",
   },
   other: {
-    bg: "#cba6f7", // mauve
+    bg: "#cba6f7",
     textBg: "bg-[#cba6f7]/10",
     glareColor: "rgba(203, 166, 247, 0.8)",
   },
-}
+};
 
 export default function AboutPage() {
-  const [mounted, setMounted] = useState(false)
+  const [mounted, setMounted] = useState(false);
   useEffect(() => {
-    setMounted(true)
-  }, [])
+    setMounted(true);
+  }, []);
 
-  if (!mounted) return null
+  if (!mounted) return null;
 
   return (
     <>
       <div className="container px-4 p-8 mx-auto max-w-7xl font-mono relative z-10">
-        {/* Hero Section with Gradient Text */}
         <section className="flex flex-col items-center justify-center min-h-[70vh] text-center mb-24">
           <div className="mb-6">
             <div className="relative">
-              <AnimatedHeading text="Aaron Wu" tag="h1" className="text-4xl md:text-6xl lg:text-7xl mb-6 " />
+              <AnimatedHeading
+                text="Aaron Wu"
+                tag="h1"
+                className="text-4xl md:text-6xl lg:text-7xl mb-6 "
+              />
 
-              {/* Subtitle with gradient text */}
               <div className="mt-4 relative">
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
@@ -107,12 +108,13 @@ export default function AboutPage() {
           </motion.div>
         </section>
 
-        {/* About Section */}
         <section id="about" className="py-12 mb-16 font-mono m-10 ">
-          <AnimatedHeading text="🐈 About Me" className="text-3xl md:text-4xl mb-12 text-center" />
+          <AnimatedHeading
+            text="🐈 About Me"
+            className="text-3xl md:text-4xl mb-12 text-center"
+          />
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-            {/* Profile Information with colorful accents */}
             <div className="relative">
               <div className="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-[#f5c2e7] via-[#cba6f7] to-[#89b4fa] rounded-full opacity-70"></div>
 
@@ -149,7 +151,6 @@ export default function AboutPage() {
               </div>
             </div>
 
-            {/* Skills Cards with catppuccin colors */}
             <div className="grid grid-cols-2 gap-4">
               {[
                 {
@@ -165,7 +166,13 @@ export default function AboutPage() {
                 },
                 {
                   title: "Frontend",
-                  skills: ["React", "TypeScript", "Tailwind CSS", "Next.js", "Cloudflare"],
+                  skills: [
+                    "React",
+                    "TypeScript",
+                    "Tailwind CSS",
+                    "Next.js",
+                    "Cloudflare",
+                  ],
                   color: skillColors.frontend,
                 },
                 {
@@ -213,15 +220,17 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Contact Section */}
         <section id="contact" className="py-12 flex flex-col">
-          <AnimatedHeading text="Get In Touch" className="text-3xl md:text-4xl mb-10 text-center" />
+          <AnimatedHeading
+            text="Get In Touch"
+            className="text-3xl md:text-4xl mb-10 text-center"
+          />
 
           <TiltCard
             className="max-w-lg mx-auto"
             tiltStrength={3}
             glareOpacity={0.1}
-            glareColor="rgba(180, 190, 254, 0.8)" // Catppuccin lavender
+            glareColor="rgba(180, 190, 254, 0.8)"
             borderGlow={true}
           >
             <Card className="bg-card/30 backdrop-blur-sm border-white/5">
@@ -229,7 +238,8 @@ export default function AboutPage() {
                 <div className="grid gap-4 py-4">
                   <div>
                     <p className="text-center text-lg mb-6">
-                      Feel free to reach out if you want to collaborate or have any questions.
+                      Feel free to reach out if you want to collaborate or have
+                      any questions.
                     </p>
                     <div className="flex flex-col space-y-4 text-center">
                       <motion.a
@@ -242,14 +252,23 @@ export default function AboutPage() {
                       </motion.a>
                       <div className="flex items-center justify-center flex-wrap gap-2 pt-2">
                         {[
-                          { name: "GitHub", color: "#cba6f7", link:"https://github.com/airwuu"},
-                          { name: "LinkedIn", color: "#89b4fa", link:"https://linkedin.com/in/airwu" },
-                          { name: "Discord", color: "#74c7ec", link:"#" },
+                          {
+                            name: "GitHub",
+                            color: "#cba6f7",
+                            link: "https://github.com/airwuu",
+                          },
+                          {
+                            name: "LinkedIn",
+                            color: "#89b4fa",
+                            link: "https://linkedin.com/in/airwu",
+                          },
+                          { name: "Discord", color: "#74c7ec", link: "#" },
                         ].map((platform, i) => (
                           <motion.a
                             key={platform.name}
                             href={platform.link}
-                            target="_blank" rel="noopener noreferrer"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="text-sm px-3 py-1 rounded-full transition-all"
                             style={{
                               borderColor: platform.color,
@@ -276,6 +295,5 @@ export default function AboutPage() {
         </section>
       </div>
     </>
-  )
+  );
 }
-

@@ -40,9 +40,8 @@ const experiences = [
     description: "Providing guidance to students in computer science topics, including programming, algorithms, and debugging.",
     skills: ["C", "C++", "Python", "Teaching", "Other"],
     highlights: [
-      "Redesigned the company's flagship product, improving performance by 40%",
-      "Implemented CI/CD pipelines, reducing deployment time by 60%",
-      "Mentored junior developers and conducted code reviews",
+      "Taught students about data structures and coding principles",
+      "Explained important mathematical concepts for programming",
     ],
   },
   {
@@ -58,19 +57,6 @@ const experiences = [
       "Designed and trained convolutional neural networks for human detection and body segmentation",
     ],
   },
-  // {
-  //   id: 3,
-  //   title: "Machine Learning Intern",
-  //   company: "Wilsilica - Lumos Control",
-  //   period: "2021 - 2022",
-  //   description: "Developed prototypes for applications of human detection on smart lighting control, focusing on ML training for TinyML/EdgeTPU.",
-  //   skills: ["Python", "Tensorflow", "Google Coral", "ML", "SSH"],
-  //   highlights: [
-  //     "Implemented 2 lighting control demos for company at local San Diego trade show",
-  //     "Expanded on lighting control designs by combining a mix of location and gesture based controls",
-  //     "Designed and trained convolutional neural networks for human detection and body segmentation",
-  //   ],
-  // },
 ];
 
 const education = [
@@ -106,7 +92,7 @@ const fadeInUp = {
 export default function ExperiencePage() {
   return (
     <div className="container px-4 py-10 mx-auto max-w-5xl">
-      {/* Page Header */}
+      {}
       <div className="mb-12 text-center">
         <AnimatedHeading
           text="Work Experience"
@@ -121,12 +107,12 @@ export default function ExperiencePage() {
         />
       </div>
 
-      {/* Experience Timeline */}
+      {}
       <div className="relative mb-20">
-        {/* Timeline Line */}
+        {}
         <div className="absolute left-0 md:left-1/2 h-full w-px bg-gradient-to-b from-accent/40 via-accent/20 to-transparent transform md:-translate-x-1/2" />
 
-        {/* Experience Cards */}
+        {}
         <div className="relative space-y-10">
           {experiences.map((exp, index) => (
             <motion.div
@@ -140,7 +126,7 @@ export default function ExperiencePage() {
                 index % 2 === 0 ? "md:flex-row-reverse" : ""
               }`}
             >
-              {/* Timeline Node */}
+              {}
               <motion.div
                 className="absolute left-0 md:left-[49.42%] w-3 h-3 rounded-full bg-accent transform md:-translate-x-1/2 z-10"
                 initial={{ scale: 0 }}
@@ -149,7 +135,7 @@ export default function ExperiencePage() {
                 viewport={{ once: true }}
               />
 
-              {/* Date */}
+              {}
               <div className={`absolute left-6 md:static font-extrabold md:flex-1 mb-3 md:mb-0 md:text-center -translate-y-7 md:translate-y-0 md:px-6${
                 index % 2 === 0 ? "md:text-left " : "md:text-right "
               }`}>
@@ -158,12 +144,12 @@ export default function ExperiencePage() {
                 </div>
               </div>
 
-              {/* Card */}
+              {}
               <div className="w-full pl-8 md:pl-0 md:w-1/2 md:max-w-md md:px-6">
                 <TiltCard
                   tiltStrength={4}
                   glareOpacity={0.08}
-                  glareColor="rgba(245, 194, 231, 0.8)" // Catppuccin pink
+                  glareColor="rgba(245, 194, 231, 0.8)"
                   borderGlow={true}
                 >
                   <Card className="bg-card/30 backdrop-blur-sm border-white/5 overflow-hidden">
@@ -176,7 +162,7 @@ export default function ExperiencePage() {
                     <CardContent>
                       <p className="mb-4">{exp.description}</p>
 
-                      {/* Skills */}
+                      {}
                       <div className="flex flex-wrap gap-2 mb-4">
                         {exp.skills.map((skill) => (
                           <span
@@ -188,10 +174,10 @@ export default function ExperiencePage() {
                         ))}
                       </div>
 
-                      {/* Highlights */}
+                      {}
                       <div className="space-y-2">
                         <h4 className="font-medium">Key Achievements</h4>
-                        <ul className="space-y-1 list-disc list-inside text-sm text-muted-foreground">
+                        <ul className="space-y-1 list-disc list-outside pl-5 text-sm text-muted-foreground">
                           {exp.highlights.map((highlight, i) => (
                             <li key={i}>{highlight}</li>
                           ))}
@@ -225,7 +211,7 @@ export default function ExperiencePage() {
             <TiltCard
               tiltStrength={3}
               glareOpacity={0.08}
-              glareColor="rgba(203, 166, 247, 0.8)" // Catppuccin mauve
+              glareColor="rgba(203, 166, 247, 0.8)"
               borderGlow={true}
             >
               <Card className="h-full bg-card/30 backdrop-blur-sm border-white/5">
