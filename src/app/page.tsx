@@ -127,7 +127,7 @@ export default function AboutPage() {
                 />
 
                 <AnimatedText
-                  text="Starting from 5th grade, coding has been a core tool that I have employed to make the my world a little better at a time."
+                  text="Starting from 5th grade, coding has been a core tool that I have employed to make my world a little better at a time."
                   className="text-lg mb-6 text-muted-foreground"
                   type="words"
                   once={true}
